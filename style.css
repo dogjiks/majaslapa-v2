@@ -1,0 +1,84 @@
+/* Reset some default styles */
+body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Apply a font throughout the body */
+body {
+    font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+}
+
+/* Style the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    padding: 10px;
+}
+
+/* Style the social media icons */
+#social-media-icons img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+/* Style the authorization buttons */
+#auth-buttons button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    background: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Style the sidebar */
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 100%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style the navigation links */
+#sidebar nav a {
+    margin: 20px 0;
+}
+
+/* Style the icons in the sidebar */
+#sidebar nav img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Style the main content area */
+main {
+    margin-left: 50px; /* Adjusted to the sidebar width */
+    text-align: center;
+    padding: 50px;
+    font-size: 48px; /* Adjust size as needed */
+    background: linear-gradient(to bottom, #ffffff 0%,#cccccc 100%);
+    height: calc(100vh - 20px); /* Adjusted to the header height */
+}
+
+/* Style the footer */
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
