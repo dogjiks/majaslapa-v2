@@ -1,0 +1,28 @@
+{% include 'base.html'%}
+
+{% if messages %}
+    <div class="message">
+    {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+            {{ message }}
+        </div>
+    {% endfor %}
+    </div>
+{% endif %}
+<div class="box">
+    <h1 id="logreg">Pievienoties</h1>
+    <div class="loginform">
+        <form method="POST">
+        {%csrf_token%}
+        {{form.as_p}}
+        <button type="submit" class="log">Pievienoties</button>
+        </form>
+        <div id="login-or">
+            <hr id="hr-or">
+            <span id="span-or">or</span>
+        </div>
+        <p>
+            Nav konta?<a href="/register" style="font-weight: 600;">Reģistrējies šeit</a>
+        </p>
+    </div>
+</div>

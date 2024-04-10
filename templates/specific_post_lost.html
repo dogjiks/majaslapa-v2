@@ -1,0 +1,32 @@
+{%include 'base.html'%}
+{%include 'header.html'%}
+{% load static %}
+
+<div class="list1 common">
+    <p><u><b>MANTA</b></u></p>
+    <p> {{data.product_title}}</p>
+    <p><u><b>VIETA</b></u></p>
+    <p>{{data.place}}</p>
+    <p><u><b>DATUMS</b></u></p>
+    <p>{{data.date}}</p>
+    <p><u><b>LAIKS</b></u></p>
+    <p>{{data.time}}</p>
+    <p><u><b>MANTAS APRAKSTS</b></u></p>
+    <p>{{data.description}}</p>
+    <p><u><b>KONTAKTI</b></u></p>
+    <p>{{data.contactme}}</p>
+    
+    <!--{%for data1 in objectpic%}
+        {% if data1.user == data.username %}
+            <img src="{{ data1.user.profile.image.url }}" alt="img">
+        {% endif %}
+    {%endfor%}-->
+   
+    <!-- {% if data.username != '' %}
+        <p style="text-align: right; padding-right: 1%; color: rgb(1, 65, 1);">Found by {{data.username}}</p>
+    {%else%}
+        <p style="text-align: right; padding-right: 1%; color: rgb(1, 65, 1);">Found by #Anonymous</p>
+    {% endif %} -->
+</div>
+<br>
+<a href="delete/" class="smalllinks">ATRADI ŠO?</a>

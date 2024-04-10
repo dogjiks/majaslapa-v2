@@ -1,0 +1,29 @@
+{%include 'base.html'%}
+{%include 'header.html'%}
+
+<div style="padding-bottom: 780px;">
+    {%for data in objectt%}
+        {% if data.username == user.username %}
+            {% for object in objects %}
+                {% if data.id == object.id %}
+                <div class="list common" onclick="window.location.href='/profile/my_lost_things/active/{{ data.id }}/'">
+                    <p><u><b>MANTA</b></u></p>
+                    <p> {{data.product_title}}</p>
+                    <p><u><b>VIETA</b></u></p>
+                    <p>{{data.place}}</p>
+                    <p><u><b>DATUMS</b></u></p>
+                    <p>{{data.date}}</p>
+                    <p><u><b>LAIKS</b></u></p>
+                    <p>{{data.time}}</p>
+                    <p><u><b>MANTAS APRAKSTS</b></u></p>
+                    <p>{{data.description}}</p>
+                    <p><u><b>KONTAKTI</b></u></p>
+                    <p>{{data.contactme}}</p>
+                    <p style="margin-left: 90%;font-family: 'Times New Roman', Times, serif;color: rgb(1, 95, 1);"><b>AKTĪVS!</b></p>
+                </div>
+                {% endif %}
+            {%endfor%}
+        {% endif %}
+    {% endfor %}
+    </div>
+{% include 'footer.html' %}

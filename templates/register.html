@@ -1,0 +1,20 @@
+{%include 'base.html'%}
+{% load crispy_forms_tags %}
+
+<div class="box">
+    <h1 id="logreg">Reģistrēties</h1>
+    <div class="registerform">
+        <form method="POST">
+            {% csrf_token %}
+            {{ formregi|crispy }}
+            <button type="submit" class="log">Reģistrēties</button>
+        </form>
+        <div id="login-or">
+            <hr id="hr-or">
+            <span id="span-or">or</span>
+        </div>
+        <p>
+            Jau ir konts? <a href="/login/" style="font-weight: 600;">Pievienoties šeit</a>
+        </p>
+    </div> 
+</div>
